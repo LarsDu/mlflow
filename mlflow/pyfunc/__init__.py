@@ -72,7 +72,7 @@ following parameters:
   ├── MLmodel
   ├── code
   │   ├── sklearn_iris.py
-  │  
+  │
   ├── data
   │   └── model.pkl
   └── mlflow_env.yml
@@ -586,8 +586,9 @@ def log_model(artifact_path, loader_module=None, data_path=None, code_path=None,
     For information about the workflows that this method supports, see :ref:`Workflows for
     creating custom pyfunc models <pyfunc-create-custom-workflows>` and
     :ref:`Which workflow is right for my use case? <pyfunc-create-custom-selecting-workflow>`.
-    You cannot specify the parameters for the first workflow: ``loader_module``, ``data_path``
-    and the parameters for the second workflow: ``python_model``, ``artifacts`` together.
+    Note that the parameters for the first workflow: ``loader_module``, ``data_path`` and the
+    parameters for the second workflow: ``python_model``, ``artifacts``, cannot be
+    specified together.
 
     :param artifact_path: The run-relative artifact path to which to log the Python model.
     :param loader_module: The name of the Python module that is used to load the model
